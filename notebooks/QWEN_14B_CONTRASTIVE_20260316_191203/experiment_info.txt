@@ -1,0 +1,3 @@
+Model: Qwen2.5-14B-Instruct
+Number of layers: 48
+Training dataset size: 204
