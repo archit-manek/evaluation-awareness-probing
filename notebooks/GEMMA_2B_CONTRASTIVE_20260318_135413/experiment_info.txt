@@ -1,0 +1,3 @@
+Model: gemma-2-2b-it
+Number of layers: 26
+Training dataset size: 204
