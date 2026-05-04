@@ -40,7 +40,10 @@ notebooks/
   *_CONTRASTIVE_*/                Saved raw and normalised layerwise vectors.
   *_PROBE_RESULTS/                Layerwise probe score CSVs.
   result_visualisations/          Paper/result figures.
-  sad/                            Local copy of the SAD benchmark code/data tree.
+  sad/                            Local SAD checkout expected by the notebooks.
+
+scripts/
+  setup_sad.sh                    Clone SAD into notebooks/sad.
 ```
 
 ## Setup
@@ -51,7 +54,15 @@ Install the core dependencies:
 pip install -r requirements.txt
 ```
 
-The experiments require access to the relevant Hugging Face model checkpoints and enough GPU memory for the selected model. Runs were performed on rented vast.ai GPU pods; the workshop paper notes that black-box evaluations were rerun under a consistent CUDA setup on H100 NVL GPUs.
+The notebooks expect a local checkout of the SAD repository at `sad/` relative to the notebook working directory. From the repository root, set this up with:
+
+```bash
+bash scripts/setup_sad.sh
+```
+
+`notebooks/probe_evaluation.ipynb` also has an idempotent fallback clone cell. The SAD checkout itself is ignored by this repository.
+
+The experiments require access to the relevant Hugging Face model checkpoints and enough GPU memory for the selected model. Runs were performed on rented vast.ai H100 NVL GPUs
 
 ## Reproduction
 

@@ -1,0 +1,38 @@
+# macOS / editor noise
+.DS_Store
+**/.DS_Store
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# External benchmark checkout used by the notebooks
+sad/
+notebooks/sad/
+
+# Environments and local secrets
+.env
+.env.*
+.venv/
+venv/
+env/
+
+# Logs and temporary outputs
+*.log
+tmp/
+temp/
+
+# Model/cache directories that should stay local
+.cache/
+cache/
+wandb/
+mlruns/
