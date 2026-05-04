@@ -62,7 +62,13 @@ bash scripts/setup_sad.sh
 
 `notebooks/probe_evaluation.ipynb` also has an idempotent fallback clone cell. The SAD checkout itself is ignored by this repository.
 
-The experiments require access to the relevant Hugging Face model checkpoints and enough GPU memory for the selected model. Runs were performed on rented vast.ai H100 NVL GPUs
+The experiments require access to the relevant Hugging Face model checkpoints and enough GPU memory for the selected model. Runs were performed on rented vast.ai H100 NVL GPUs.
+
+For gated Hugging Face checkpoints, set `HF_TOKEN` in your shell before running the notebooks:
+
+```bash
+export HF_TOKEN=...
+```
 
 ## Reproduction
 
